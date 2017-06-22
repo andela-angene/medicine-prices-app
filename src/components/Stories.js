@@ -46,16 +46,16 @@ export default class Stories extends Component {
     return (
       <div className="cover">
         <hr/>
-        <div className="stories" style={{ "maxWidth": "800px", "margin": "0 auto 10px", "padding": "15px" }}>
+        <div className="stories">
           <h3>Latest headlines:</h3><br />
           <div className="row">
-            <div className="col-sm-5" style={{ "marginRight": "40px" }} >
+            <div className="col-sm-5 rightMargin" >
 
               {data.map((tile, index) => (
                 <div key={index} className="media">
-                   <div class="thumbnail">
+                   <div>
                       <img src={tile.ImageUrl} alt="..." style={{ "maxWidth": "450px" }} />
-                      <div class="caption" className="top-margin">
+                      <div className="caption top-margin">
                         <h3>{tile.Title}</h3>
                         <p className="align-text">{tile.Description}</p>
                         <p className="top-margin"><a href={tile.StoryUrl} className="btn btn-primary" role="button">Read more ...</a></p>
