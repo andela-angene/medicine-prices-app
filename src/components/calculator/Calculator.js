@@ -3,10 +3,11 @@ import { CalculationResult } from './CalculationResult';
 import { PriceForm } from './PriceForm';
 import { getMedicine } from '../utils/Api';
 import axios from 'axios';
+import pym from 'pym.js';
 
 let ReactGA = require('react-ga');
 ReactGA.initialize('UA-93090833-2');
-
+var pymChild = null;
 /*
 * The Calculator Component
 */
@@ -21,15 +22,15 @@ export default class Calculator extends Component {
       showCalculator: true,
       showResult: false,
       userDrugPrice: 0,
-      userPercentage: 0,
+      userPercentage: 0
     };
     this.baseState = this.state;
     this.onSubmit = this.onSubmit.bind(this);
     this.calculate = this.calculate.bind(this);
     this.formatDrugs = this.formatDrugs.bind(this);
   }
-
   componentDidMount() {
+    pymChild = new pym.Child();
     axios.get("https://dc.sourceafrica.net/javascripts/rates.json").then(
       res => { this.EXCHNG = res.data.rates.NGN; }
     ).catch((error) => {
@@ -42,6 +43,7 @@ export default class Calculator extends Component {
       userDrugPrice: userDrugPrice,
       currentDrug: drug
     }, this.calculate);
+    pymChild.sendHeight();
     ReactGA.event({
       category: "Search",
       action: "search",
@@ -53,6 +55,7 @@ export default class Calculator extends Component {
   // format list of drugs to have each brand name as it's own drug
   formatDrugs() {
     // make copy of state
+    let counter = 0;
     let drugs = this.state.drugs.copyWithin();
     for (let drug of drugs) {
       if (drug.brand_names) {
@@ -63,14 +66,14 @@ export default class Calculator extends Component {
             strength: drug.strength,
             name: drug.brand_names[name],
             form: drug.form,
-            id: drug.id + "3614" + name
+            id: counter
           };
+          counter++;
           drugs.push(new_drug); // peer pressure
         }
       }
       delete drug.brand_names;
     }
-    console.log(drugs.length)
     this.setState({ drugs: drugs });
   }
 
@@ -92,37 +95,24 @@ export default class Calculator extends Component {
 
   render() {
     return (
+      <div>
       <div className="container calculator-container">
-        {this.state.showCalculator ? <div className="calculator">
-          <div className="price-form-container">
+        {this.state.showCalculator ?
+          <div className="calculator well well-lg">
+            <div className="price-form-container">
             <p className={"sub text-center " + (this.props.bodyFont || "")}>You might be paying too much for life saving drugs.</p>
             <h1 className={"medprices-heading text-center " + (this.props.headerFont || "")}>What should your medicine cost?</h1>
             <p className={"medprices-paragraph text-center " + (this.props.bodyFont || "")}>
-              Let's find out. Tell us how much you pay.
+              Let&lsquo;s find out. Tell us how much you pay.
             </p>
             <PriceForm
               drugs={this.state.drugs}
               onSubmit={this.onSubmit}
               headerFont={this.props.headerFont}
               bodyFont={this.props.bodyFont}
-            />
-            {!document.location.pathname.includes("embed") ? <div className="row"><div className="about col-xs-12 col-sm-12 col-md-7 center-block">
-              <p className={"sub post-form-paragraph " + (this.props.bodyFont || "")}>
-                Most Nigerians struggle to afford medicines. Ministry of Health
-                 research, going as far back as 2006, indicates that 90.2% of
-                citizens survive on income of just US$2 a day. Even government
-                workers earn, on average, just US$1.4 per day.
-              </p>
-              <p className={"sub " + (this.props.bodyFont || "")}>
-                Income levels haven’t improved much over the past 10 years but
-                medicine prices continue to soar. This tool helps shine a spotlight
-                on just how expensive medicine is and asks why Nigeria pays more
-                than the rest of the world.
-              </p>
-            </div></div> : null}
-          </div>
-        </div>
-          : null
+              />
+            </div>
+         </div> : null
         }
         {this.state.showResult ?
           <CalculationResult
@@ -136,7 +126,25 @@ export default class Calculator extends Component {
             bodyFont={this.props.bodyFont}
           />
           : null
-        }
+          }
+                    {!document.location.pathname.includes("embed") ?
+              <div className="row">
+                <div className="about col-xs-12 col-sm-12 col-md-7 center-block textColor">
+                <p className={"textColor" + (this.props.bodyFont || "")}>
+                    Most Nigerians struggle to afford medicines. Ministry of Health
+                    research, going as far back as 2006, indicates that 90.2% of
+                    citizens survive on income of just US$2 a day. Even government
+                    workers earn, on average, just US$1.4 per day.
+                  </p>
+                  <p className={" textColor " + (this.props.bodyFont || "")}>
+                    Income levels haven’t improved much over the past 10 years but
+                    medicine prices continue to soar. This tool helps shine a spotlight
+                    on just how expensive medicine is and asks why Nigeria pays more
+                    than the rest of the worlds.
+                  </p>
+                </div>
+              </div> : null}
+        </div>
       </div>
     )
   }
