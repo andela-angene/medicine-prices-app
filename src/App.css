@@ -1,5 +1,6 @@
 *{
-  font-family: 'Open Sans', Helvetica;
+  font-family: 'Source Sans Pro';
+  font-weight: 300;
 }
 
 body{
@@ -27,10 +28,43 @@ input[type="color"]:focus,
   outline: 0 none;
 }
 
+
+.left {
+  float: left;
+}
+.center-text {
+  text-align: center;
+}
+.navbar {
+  margin-bottom: 0;
+  box-shadow: 0 1px 2px -1px #cccccc;
+}
+.navbar-default {
+  background-color: white;
+}
+.mg-top-11{
+  margin-top: 11px;
+}
+.navbar-default .navbar-brand:hover{
+  color: #72abd1;
+}
+.navbar-right {
+  padding: 0 !important;
+}
+.nav>li>a {
+  padding: 16px 4px;
+}
+.recent-story{
+  margin-left: -10px;
+  margin-top: 9%;
+  color: black;
+  width: 35%;
+  float: left;
+
+}
 .App {
   text-align: center;
 }
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -43,10 +77,6 @@ input[type="color"]:focus,
   color: white;
 }
 
-.App-intro {
-  font-size: large;
-}
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -55,116 +85,376 @@ input[type="color"]:focus,
 .cfn-logo{
   height: 3.5em;
 }
-
 .calculator-container{
   min-height: auto;
-  margin-bottom: 70px;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
+.calculator{
+  border: 1px solid #0075c5;
+  padding: 20px;
+  border-radius: 4.5px;
+}
+.spacer {
+  height: 20px;
+}
+.check-your-med-prices {
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  color: #0075c5;
+  height: 14px;
+  margin-top: 16px;
+}
+.page-width{
+  width: 100%;
+  padding: 0;
+}
+.get-in-touch{
+  letter-spacing: 0.9px;
+  color: #0075c5;
+}
+.medium-logo{
+  color: #1C9963;
+}
+.story{
+	width: 100%;
+	height: 442px;
+	background-color: #000000;
+	border: solid 0.5px #979797;
+  color: white;
+  margin: 0 auto;
+}
+.story-title{
+  color: black;
+  text-align: justify;
+  margin-top: 5px;
+}
+.author{
+  font-weight: bold;
+  color: #3B5998;
+}
+.medium-story hr{
+  opacity: 0.4;
+  background-color: black;
+}
+.storyHeading {
+  margin-top: 45px;
+  text-align: center;
+  font-size: 25px;
+}
+.write-up{
+  text-align: center;
+  margin: 0 auto;
+}
+.ash-colour{
+  color: #90949c;
+}
+.heading{
+  line-height: 1.6;
+  display: inline;
+}
+.heading-wording{
+	background-color: #3cd682;
+  box-shadow: 8px 1px 0 2px #3cd682, -8px 1px 0 2px #3cd682;
+  font-weight: bold;
+}
+.well{
+  background: #ffffff;
+  border-radius: 0;
+}
+.set-height {
+  height: 55%;
+  width: 100%;
+}
+.spacer2 {
+  width: 15px;
+}
+.set-height .row{
+  margin-right: 0;
+}
+.emergency-img{
+  height: 45%;
+  width: 100%;
+}
+.hover-test{
+  height: 320px;
+  margin-bottom: 15px;
+}
+.story-content{
+  margin-top: 25px;
+}
+.story-content h4 {
+  margin-bottom: 22px;
+  margin-top: 13px;
+}
+.hover-test:hover{
+  height: 320px;
+}
+.hover-test:hover .set-height{
+  height: 35%;
+}
+.hover-test:hover .emergency-img{
+  height: 35%;
+}
+.hover-test:hover .story-content{
+  margin-top: 15px;
+}
+.hover-test:hover .well{
+  height: 65%;
+}
+.hover-test:hover .top-margin{
+  margin-top: 6px;
+}
+.hover-test:hover .extra {
+  display: inline-block;
+  font-weight: 200;
+  opacity: 0.9;
+  margin-top: 15px;
+  height: 52px;
+  overflow: hidden;
+  width: 100%;
+  font-size: 11px;
+}
+.btn{
+  border-radius: 4px;
+}
+hr{
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.ontop{
+  margin-top: 1%;
+}
+.embeds{
+	background-color: #3cd682;
+  border: solid 0.5px #979797;
+  padding-top: 50px;
+  padding-bottom: 35px;
+  width: 100%;
+  text-align: center;
+}
+.embed-inner{
+  margin: 0 auto;
+  width: 60%;
+}
+.cfa-logo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.storyBody{
+  margin-top: 2%;
+  text-align: center;
+  opacity: 0.8;
+}
+.story-section{
+  width: 65%;
+  margin: 0 auto;
+}
+.illustration {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  max-height: 270px;
+  overflow-y: hidden;
+  position: relative;
+  margin-top: 37px;
+    }
 
-.lineHeight{
+.navbar {
+  border: none;
+}
+.navbar-default .navbar-nav>li>a {
+  color:#0075c5;
+  /*font-weight: 600;*/
+  letter-spacing: 0.9px;
+}
+.navbar-brand{
+  color: #0075c5;
+}
+.fa{
+  font-size: 12px;
+}
+.rectangle {
+  border-radius: 1px;
+  background-color: #ffffff;
+  border: solid 0.5px #0075c5;
+  height: 43.8px;
+  width: 55%;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.i_buy {
+  margin-left:13px;
+  font-weight: 800;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.negative-margin-top {
+  margin-top: -9px;
+}
+.form-control{
+  height: 20px;
+  letter-spacing: -0.1px;
+
+}
+.form-group {
+  margin-bottom: 6px !important;
+}
+.center-div{
+  margin: 0 auto;
+}
+.latest-story-sub{
+  border-right: 1px solid white;
+  color: white;
+  padding-right: 0;
+  padding-left: 0;
+  overflow: hidden;
+  height: 20px;
+  float: left;
+  font-size: 11px;
+}
+.punch-logo-sm{
+  width: 26%;
+}
+.navbar-default .navbar-brand{
+  color: #0075c5;
+}
+.time-div{
+  width: 19%;
+  margin-right: 8px;
+}
+.embed-height{
+  height: 405px;
+  background-color: white;
+  overflow: scroll;
+  margin-bottom: 15px;
+}
+.navbar-right{
+  margin-right: 0px;
+}
+.pad-10{
+  padding: 10px;
+}
+.pic-size{
+  max-width: 420px;
+  width: 100%;
+  height: 100%;
+}
+.pic-margin{
+  margin-top: 33px;
+}
+.font-small{
+  color: white;
+  margin-left: 6px;
+  line-height: 1.5;
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 11px;
+}
+.top-margin{
+  margin-top: 38px;
+  margin-left: 13px;
+  letter-spacing: 1.5px;
+}
+.top-margin a {
+  text-decoration: none;
+    color: #4d4d4d;
+}
+.top-margin p {
+  padding: 0;
+}
+.arrow {
+	width:18px;
+	height: 14px;
+	object-fit: contain;
+}
+.well{
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.lineHeight {
   line-height: 170%;
   text-align: justify;
-
 }
-.marg{
+.marg {
   margin-top:120px;
   color:black;
 }
-.textColor{
-  color:black;
-}
-.price-form{
+.price-form {
   width: 80%;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 5px;
 }
-.full{
+.full {
   width:100%;
 }
-.price-form-container .medprices-heading{
-  font-size: 45px;
+.medprices-heading {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #0075c5;
+}
+.stories-section {
   margin-top: 10px;
 }
-.cover{
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.price-form-container .sub{
-  margin-bottom: 15px;
-}
-
 .navbar{
-  height: 7em;
   background: white;
 }
-
-.navbar-right{
+.navbar-right {
   padding-top: 25px;
   text-transform: uppercase;
-  font-size: 13px;
 }
-.navbar-right .fa-twitter:hover{
+.navbar-right .fa-twitter:hover {
   color: skyblue;
 }
-.navbar-right .fa-facebook:hover{
+.navbar-right .fa-facebook:hover {
   color: #3b5998;
 }
-
-.embed-nav-button{
-  font-size: 10px;
-}
-
-.navitem-divider{
+.navitem-divider {
   border-left: 1px solid #f5f5f5;
   padding: 15px 0px 0px 0px;
   width: 0px;
 }
-
 .sub {
   color: #999;
-  font-size: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 8px;
   margin-left: auto;
   margin-right: auto;
 }
-
-.post-form-paragraph{
+.post-form-paragraph {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
-.medprices-heading{
-  font-size: 2.343em;
-  font-weight: 900;
+.medprices-heading {
   color: #0B5D97;
-  margin-bottom: 20px;
-  font-family: 'Patua One', cursive;
-}
-.logoFont{
-  font-size: 30px;
+  padding: 0;
 }
 .medprices-paragraph {
-  font-size: 20px;
+  color: #111111;
+  margin-bottom: 0px;
 }
-.stories{
-  max-width: 800px;
-  margin: 0 auto 10px;
-  padding: 15px;
+.stories {
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 35px;
+  text-align: center;
+  padding: 30px 0;
 }
 .rightMargin{
   margin-right: 40px;
 }
-.price-form input{
+.price-form input {
   border: 0px;
-  border-bottom: 1px solid #b1bfd4;
   box-shadow: none;
   border-radius: 0;
 }
-
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
-  color: #0B5D97;
+  color: #72abd1;
 }
-
 .embed-code-input{
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -181,260 +471,331 @@ input[type="color"]:focus,
 }
 
 .global-average{
-  font-size: 20px;
   font-weight: 200;
   color: #999;
   margin-bottom: 50px;
 }
-
 .calculation-result .medprices-heading{
   margin-bottom: 40px;
 }
-
 .call-to-action{
-  font-size: 40px;
   font-weight: 300;
 }
-
 .call-to-action:hover{
   color: black;
   text-decoration: none;
 }
-
 .assumption{
-  font-size: 14px;
   margin-top: 40px;
   margin-bottom: 20px;
   color: #999;
 }
-
 .reset-calculator{
   cursor: pointer;
-  font-size: 14px;
 }
-
 .reset-calculator span{
   color: black;
-  font-size: 20px;
 }
-.top-margin{
-  margin-top: 35px;
+.topMargin{
+  margin-top: 14px;
+  margin-left: 20px;
+  opacity: 0.85;
 }
 .align-text{
   text-align: justify;
 }
-.show-result-btn{
-  padding: 11px 60px;
-  background-color: #3cd682;
-  border: none;
-  color: white;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.btn{
+  border-radius: 4px;
+  padding: 6px 15px;
 }
-.show-result-btn[disabled],.show-result-btn:hover,
+.show-result-btn{
+  background-color: #3cd682;
+  border-color: #3cd682;
+  color: white;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.show-result-btn:hover{
+  color: #3cd682;
+  background-color: white;
+  border-color: #3cd682;
+}
+.embed-btn{
+  padding: 9px 30px;
+	background-color: #0075c5;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.embed-btn:hover {
+    color: #0075c5;
+    background-color: white;
+    border-color: #0075c5;
+}
+.extra {
+  display:none;
+}
+.show-result-btn[disabled],
 .show-result-btn[disabled]:hover, .show-result-btn:active, .show-result-btn:focus
 {
-  background-color: #5cb85c;
+  background-color: #3cd682;
   color: white;
 }
 
+/* footer section */
 footer{
   background: #000;
   color:white;
-  font-size: 16px;
-  padding-top: 50px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: normal;
 }
-
 footer h3{
-  font-size: 16px;
   font-weight: 100;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
-
 footer h3 span{
-  font-size: 46px;
   text-transform: capitalize;
+  font-size: 35px;
 }
-
 footer .credits{
-  margin-bottom: 37px;
+  margin-bottom: 30px;
 }
-
 footer .credits p{
-  font-size: 16px;
-  margin: 16px 0px;
+  margin: 6px 0px;
   font-weight: 200;
 }
-
+.align-text{
+  text-align: justify;
+}
 footer a{
   color: #339966;
 }
-
 footer a:hover{
   color: #339966;
 }
-
 footer .credits p a{
   margin-left: 7px
 }
-
 footer .post-credits{
   float: none;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
   font-weight: 200;
-  font-size: 16px;
 }
-
 footer .sponsors{
-  height: 50px;
-  padding-bottom: 5px
+  height: 30px;
+  padding-bottom: 5px;
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-
 footer .ancir-logo{
-  height: 70px;
+  height: 50px;
 }
 .med {
   height: 40px;
 }
 footer .cfn-logo{
-  height: 60px;
+  height: 40px;
 }
-
 footer .sponsors-link{
   display: inline-block;
-  margin: 30px;
-  padding-bottom: 10px
+  padding-bottom: 5px
 }
 pre{
   padding: 20px;
   margin-top: 30px;
   margin-bottom: 25px;
 }
-footer .sponsors-link:hover{
+footer .sponsors:hover{
   border-bottom: 1px solid #339966;
 }
-
 footer .fa-twitter-square {
   color: skyblue;
   margin-right: 10px;
 }
-
 footer .fa-github {
   color: white;
   margin-right: 10px;
 }
-
 footer .fa-facebook-square {
   color: #3B5998;
   margin-right: 10px;
 }
-
-.punch-ng-header{
-  font-family: 'Frank Ruhl Libre', serif;
-}
-
-.punch-ng-body{
-  font-family: 'Playfair Display', serif;
-}
-
 .share-results-links a{
   margin: 15px;
 }
-
 .share-results-links .share-header{
-  font-size: 30px;
   font-weight: 300;
   color: #CE4415;
 }
-
 .sachet{
-  font-size: 13px;
   float: none;
+  width: 70%;
+  margin-top: 12px;
+  font-size: 11px;
 }
-
 #brand-name-tooltip .tooltip-inner{
   max-width: none;
 }
-
 .dropdown-menu li a{
   padding: 0px;
 }
-
 .dropdown-drug{
   padding: 3px 20px;
   padding-bottom: 20px;
 }
-
 .share-context{
   width: 70%;
   margin: 0 auto;
   margin-bottom: 20px;
-  font-size: 20px
 }
-
 .about{
   float: none;
 }
-
 .suggest-med{
   float: right;
-  font-size: 16px;
   margin: 5px;
   color: #0B5D97;
 }
+
+.suggest-med:hover, .suggest-med:focus{
+  text-decoration: none;
+}
+
 @media screen and (min-width:730px) {
   .marginTop{
     margin-top: -60px;
   }
 }
-@media (max-width:767px) and (min-width:500px) {
-  .show-result-btn{
-    margin-left: 33%;
-  }
-}
-.suggest-med:hover, .suggest-med:focus{
-  text-decoration: none;
-}
 
 @media screen and (max-width: 767px) {
-  .price-form-container .medprices-heading {
-    font-size: 32px;
+  .illustration{
+    display: inline-block;
   }
   .price-form{
-  width: 73%;
+    width: 73%;
+    margin: 0 auto;
+    margin-top: 25px;
+ }
+ .price-form-container .sub{
+   margin-bottom: 8px;
+ }
+  .stories{
+    width: 80%;
+  }
+  .rectangle {
+    width: 80%;
+  }
+  .sachet{
+    width: 100%;
+  }
+  .embed-inner{
+    width: 80%;
+  }
+  .recent-story h3 {
+    /* font-size: 14px; */
+  }
+
+  .check-your-med-prices{
+    float: left;
+  }
+
+  .navbar-brand { padding-left: 0; }
+
+  .recent-story {
+    float: none;
+    position: relative;
+  }
+}
+
+.embed-item, .story-box {
+  position: relative;
+  width: 270px;
+  display: inline-block;
+  border-radius: 5px;
+  overflow-y: hidden;
+  margin-right: 25px;
+  overflow: hidden;
+}
+
+.embed-item {
+  margin: 0 28px 10px 0;
+  height: 500px;
+}
+
+.embed-item:last-child, .story-box:last-child {
+  margin-right: 0;
+}
+
+.medium-embed {
+  overflow: auto;
+  background-color: #fff;
+  padding: 5px;
+}
+
+.inner-container {
+  position: relative;
+  width: 100%;
+  max-width: 870px;
   margin: 0 auto;
-  margin-top: 25px;
- }
-.medprices-paragraph {
-  font-size: 16px;
- }
-.punch-ng-body{
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-}
-.price-form-container .sub{
-  margin-bottom: 15px;
-  font-size: 13px;
-}
 }
 
-@media screen and (min-width: 768px) {
-  .price-form-container .medprices-heading {
-    font-size: 32px;
+@media screen and (max-width: 992px) {
+  .recent-story {
+    display: block;
+    position: absolute;
+    padding: 5px 15px;
+    min-width: 250px;
+    right: -10px;
+  }
+  .recent-story .topMargin {
+    margin-top: 5px;
+    margin-left: -8px;
+    padding: 10px 10px 0px 10px;
+    opacity: 0.85;
+    background-color: #000;
   }
 }
-
-@media screen and (min-width: 992px) {
-  .price-form-container .medprices-heading{
-    font-size: 45px;
+@media screen and (max-width: 640px) {
+  .embed-item, .story-box {
+    display: block;
+    margin: 0 auto 20px auto;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  .price-form-container .medprices-heading {
-    font-size: 55px;
+  .embed-item:last-child, .story-box:last-child {
+    margin: 0 auto 20px auto;
   }
+  .story {
+    height: 680px;
+  }
+  .recent-story {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+  }
+  .recent-story .topMargin {
+    margin-top: 5px;
+    margin-left: -8px;
+    padding: 10px 10px 0px 10px;
+    opacity: 0.85;
+    background-color: #000;
+  }
+  .story-section {
+      width: 90%;
+      margin: 0 auto;
+  }
+  .pic-margin .left {
+    float: none;
+    text-align: center;
+  }
+  .pic-margin img {
+    margin: 0 auto;
+  }
+  .topMargin{
+    text-align: left;
+    max-width: 250px;
+  }
+  .stories { padding-top: 10px; }
 }

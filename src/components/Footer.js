@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 export default class Footer extends Component {
   render() {
     return (
-      <footer className="row footer">
+      <footer className="footer">
         <div className="about col-sm-12 center-block text-center">
           <h3>This is a <span>&nbsp;Cost of Life&nbsp;</span> Project</h3>
           <div className="credits">
@@ -22,7 +22,10 @@ export default class Footer extends Component {
             </p>
             <p>Data Visualizations:
               <a href="https://github.com/ryansept" target="_blank" rel="noopener noreferrer">
-                Ryan Marvin (Kenya), Mariam Abdussalam(Nigeria)
+                Ryan Marvin (Kenya)
+              </a>
+              <a href="https://github.com/andela-mabdussalam" target="_blank" rel="noopener noreferrer">
+                Mariam Abdussalam(Nigeria)
               </a>
             </p>
             <p>Data Source:
@@ -54,9 +57,9 @@ export default class Footer extends Component {
                 International Center for Journalists.</a>
             </p>
           </div>
-          <a href="https://investigativecenters.org" className="sponsors-link" target="_blank" rel="noopener noreferrer"><img className="sponsors ancir-logo" alt="ANCIR" src="/ancir-logo.jpg" /></a>
-          <a href="http://punchng.com" className="sponsors-link" target="_blank" rel="noopener noreferrer"><img className="sponsors" alt="Punch Nigeria" src="/punch-ng-logo-white.png" /></a>
-          <a href="http://www.codefornigeria.org" className="sponsors-link" target="_blank" rel="noopener noreferrer"><img className="sponsors cfn-logo" alt="Code for Nigeria" src="/cfn-logo-white.png" /></a>
+          <a href="https://investigativecenters.org" className="sponsors-link" target="_blank" rel="noopener noreferrer"><img className="sponsors ancir-logo" alt="ANCIR" src="img/ancir-logo.jpg" /></a>
+          <a href="http://punchng.com" className="sponsors-link" target="_blank" rel="noopener noreferrer"><img className="sponsors" alt="Punch Nigeria" src="img/punch-ng-logo-white.png" /></a>
+          <a href="http://www.codefornigeria.org" className="sponsors-link" target="_blank" rel="noopener noreferrer"><img className="sponsors cfn-logo" alt="Code for Nigeria" src="img/cfn-logo-white.png" /></a>
         </div>
       </footer >
     )
