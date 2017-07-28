@@ -44,7 +44,7 @@ fi
 echo 'Creating build(this could take a while)...'
 
 # create distributable code
-echo $(npm run build)
+echo $(npm install && npm run build)
 
 echo 'Finished build'
 
